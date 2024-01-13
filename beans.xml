@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cachorro1" class="com.vct.entities.Cachorro">
+        <property name="nome" value="Nevinho"/>
+        <property name="raca" value="Lhasa Apso"/>
+        <property name="dono" ref="pessoa1"/>
+    </bean>
+
+    <bean id="cachorro2" class="com.vct.entities.Cachorro">
+        <property name="nome" value="Luke"/>
+        <property name="raca" value="Beagle"/>
+        <property name="dono" ref="pessoa1"/>
+    </bean>
+
+    <bean id="endereco1" class="com.vct.entities.Endereco">
+        <property name="rua" value="Av. Peixe Cavalo"/>
+        <property name="bairro" value="Taruma-Acu"/>
+        <property name="numero" value="260"/>
+    </bean>
+
+    <bean id="pessoa1" class="com.vct.entities.Pessoa">
+        <constructor-arg index="0" type="java.lang.String" value="Victor"/>
+        <constructor-arg index="1" type="java.lang.String" value="Dantas"/>
+        <constructor-arg index="2" type="java.lang.String" value="victor@gmail.com"/>
+        <constructor-arg index="3" ref="endereco1"/>
+        <property name="cachorros">
+            <list>
+                <ref bean="cachorro1"/>
+                <ref bean="cachorro2"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
