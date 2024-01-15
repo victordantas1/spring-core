@@ -1,14 +1,24 @@
 package com.vct.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
 public class Pessoa {
 
+
     private String nome;
+
     private String sobrenome;
+
     private String email;
+
+    @Autowired
     private Endereco endereco;
 
+    @Autowired
     private List<Cachorro> cachorros;
 
     public Pessoa() {

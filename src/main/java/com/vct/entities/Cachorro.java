@@ -1,9 +1,12 @@
 package com.vct.entities;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Cachorro {
 
     private String nome;
     private String raca;
+    @Autowired
     private Pessoa dono;
 
     public Cachorro () {

@@ -1,5 +1,11 @@
 package com.vct.entities;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Component;
+
+import java.util.logging.Logger;
+
 public class Endereco {
 
     private String rua;
@@ -13,6 +19,10 @@ public class Endereco {
         this.rua = rua;
         this.bairro = bairro;
         this.numero = numero;
+    }
+
+    public void destroyEnd() {
+        System.out.println("destroy endereco");
     }
 
     public String getRua() {
