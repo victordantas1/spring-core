@@ -27,9 +27,7 @@
     </bean>
 
     <bean id="pessoa1" class="com.vct.entities.Pessoa">
-        <property name="nome" value="Victor"/>
-        <property name="sobrenome" value="Dantas"/>
-        <property name="email" value="victor@gmail.com"/>
+
     </bean>
 
 

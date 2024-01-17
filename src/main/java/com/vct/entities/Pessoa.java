@@ -9,11 +9,13 @@ import java.util.List;
 
 public class Pessoa {
 
-
+    @Value("${pessoa.nome}")
     private String nome;
 
+    @Value("${pessoa.sobrenome}")
     private String sobrenome;
 
+    @Value("${pessoa.email}")
     private String email;
 
     @Autowired
