@@ -1,5 +1,8 @@
-package com.vct.entities;
+package com.vct.config;
 
+import com.vct.entities.Cachorro;
+import com.vct.entities.Endereco;
+import com.vct.entities.Pessoa;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

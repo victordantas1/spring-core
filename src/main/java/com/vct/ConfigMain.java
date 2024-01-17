@@ -1,10 +1,10 @@
 package com.vct;
 
-import com.vct.entities.ConfigBeans;
+import com.vct.config.ConfigBeans;
 import com.vct.entities.Pessoa;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Main {
+public class ConfigMain {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ConfigBeans.class);

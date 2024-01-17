@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.logging.Logger;
 
+@Component
 public class Pessoa {
 
     @Value("${pessoa.nome}")

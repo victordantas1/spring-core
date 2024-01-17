@@ -3,13 +3,12 @@ package com.vct;
 import com.vct.entities.Endereco;
 import com.vct.entities.Pessoa;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
  * Hello world!
  *
  */
-public class App
+public class XmlMain
 {
     public static void main( String[] args )
     {
