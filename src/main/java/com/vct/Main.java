@@ -1,5 +1,7 @@
-package com.vct.entities;
+package com.vct;
 
+import com.vct.entities.ConfigBeans;
+import com.vct.entities.Pessoa;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -11,8 +13,8 @@ public class Main {
         System.out.println("Email: " + p1.getEmail());
         System.out.println("Endereco: " + p1.getEndereco().getRua() + ", " + p1.getEndereco().getBairro());
         System.out.println("Cachorros: ");
-        p1.getCachorros().forEach(cachorro -> System.out.println("Nome: "+ cachorro.getNome() + " | Raca: " + cachorro.getRaca()
+        p1.getCachorros().forEach(cachorro -> System.out.println("Nome: " + cachorro.getNome() + " | Raca: " + cachorro.getRaca()
                 + " | Dono: " + cachorro.getDono().getNome()));
-    }
 
+    }
 }

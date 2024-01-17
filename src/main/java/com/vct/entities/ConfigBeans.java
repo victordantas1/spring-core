@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Primary;
 @Configuration
 public class ConfigBeans {
 
-    @Bean
+    @Bean(name = "main")
     public Endereco endereco1() {
         return new Endereco("Rua Itaguaruna", "Cidade Nova", "21");
     }
 
     @Bean
-    @Primary
+    @Primary // Caso haja ambiguidade define o principal
     public Endereco endereco2() {
         return new Endereco("Av. Peixe Cavalo", "Taruma-Acu", "260");
     }

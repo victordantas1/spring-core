@@ -2,6 +2,7 @@ package com.vct;
 
 import com.vct.entities.Endereco;
 import com.vct.entities.Pessoa;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 /**
@@ -12,7 +13,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans-a.xml");
         Pessoa p1 = context.getBean(Pessoa.class);
         Endereco end2 = context.getBean(Endereco.class);
         System.out.println("Nome: " + p1.getNome() + " " + p1.getSobrenome());
