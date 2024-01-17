@@ -1,11 +1,16 @@
 package com.vct.entities;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Pessoa {
 
@@ -24,6 +29,8 @@ public class Pessoa {
 
     @Autowired
     private List<Cachorro> cachorros;
+
+    Log log = LogFactory.getLog(getClass());
 
     public Pessoa() {
     }
@@ -73,5 +80,15 @@ public class Pessoa {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        log.info("Pessoa CONSTRUIDA");
+    }
+
+    @PreDestroy
+    public void preDestroy() {
+        log.info("Pessoa sera DESTRUIDA");
     }
 }

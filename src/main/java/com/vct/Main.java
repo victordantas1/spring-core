@@ -15,6 +15,5 @@ public class Main {
         System.out.println("Cachorros: ");
         p1.getCachorros().forEach(cachorro -> System.out.println("Nome: " + cachorro.getNome() + " | Raca: " + cachorro.getRaca()
                 + " | Dono: " + cachorro.getDono().getNome()));
-
     }
 }
